@@ -24,6 +24,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    "Petstagram.photos.apps.PhotosConfig",
+    "Petstagram.pets.apps.PetsConfig",
+    "Petstagram.accounts.apps.AccountsConfig",
+    "Petstagram.common.apps.CommonConfig"
 ]
 
 MIDDLEWARE = [
@@ -119,6 +123,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 
 STATIC_URL = 'static/'
+
+STATICFILES_DIRS = (
+    BASE_DIR / 'static',
+)
 
 # Default primary key field type
 
