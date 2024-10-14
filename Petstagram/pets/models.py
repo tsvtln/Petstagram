@@ -16,15 +16,18 @@ class Pet(models.Model):
 
     slug = models.SlugField(
         unique=True,
-        null=False,
+        null=True,
         blank=True,
+        editable=False,
     )
 
     def save(self, *args, **kwargs):
+
+        super().save(*args, **kwargs)  # to save the object in the database
         """
         if self.name, self.id is 'Sasho Petkov' 2 it will slugify it to sasho-petkov-2 (where 2 is the id).
         """
         if not self.slug:
             self.slug = slugify(f"{self.name}-{self.id}")
 
-        super().save(*args, **kwargs)
+        super().save(*args, **kwargs)  # to save new data of the slug
