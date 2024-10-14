@@ -33,3 +33,6 @@ class Pet(models.Model):
             self.slug = slugify(f"{self.name}-{self.id}")
 
         super().save(*args, **kwargs)  # to save new data of the slug
+
+    def __str__(self):
+        return self.name
