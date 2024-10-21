@@ -28,6 +28,7 @@ class Pet(models.Model):
         super().save(*args, **kwargs)  # to save the object in the database
         """
         if self.name, self.id is 'Sasho Petkov' 2 it will slugify it to sasho-petkov-2 (where 2 is the id).
+        remove the 'if' statement to generate new slugs instead of using old ones incase of renaming
         """
         if not self.slug:
             self.slug = slugify(f"{self.name}-{self.id}")
