@@ -1,9 +1,6 @@
 from django.db import models
 from django.template.defaultfilters import slugify
 
-from Petstagram.photos.validators import FileSizeValidator
-
-
 class Pet(models.Model):
     name = models.CharField(
         max_length=30,
