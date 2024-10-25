@@ -25,28 +25,28 @@
                 </span>
 
                 <span class="step-links-buttons">
-
-                    <!-- If there are previous and next photos -->
-                    {% if page_obj.has_previous and page_obj.has_next %}
-                        <a href="?{% url_query_append_tag request 'page' page_obj.previous_page_number %}">
-                            <i class="fa-solid fa-arrow-left"></i>
-                        </a>
-                        <a href="?{% url_query_append_tag request 'page' page_obj.next_page_number %}">
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-
-                    <!-- If there are only previous photos -->
-                    {% elif page_obj.has_previous %}
-                        <a href="?{% url_query_append_tag request 'page' page_obj.previous_page_number %}">
-                            <i class="fa-solid fa-arrow-left"></i>
-                        </a>
-
-                    <!-- If there are only next photos -->
-                    {% elif page_obj.has_next %}
-                        <a href="?{% url_query_append_tag request 'page' page_obj.next_page_number %}">
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    {% endif %}
+{##}
+{#                    <!-- If there are previous and next photos -->#}
+{#                    {% if page_obj.has_previous and page_obj.has_next %}#}
+{#                        <a href="?{% url_query_append_tag request 'page' page_obj.previous_page_number %}">#}
+{#                            <i class="fa-solid fa-arrow-left"></i>#}
+{#                        </a>#}
+{#                        <a href="?{% url_query_append_tag request 'page' page_obj.next_page_number %}">#}
+{#                            <i class="fa-solid fa-arrow-right"></i>#}
+{#                        </a>#}
+{##}
+{#                    <!-- If there are only previous photos -->#}
+{#                    {% elif page_obj.has_previous %}#}
+{#                        <a href="?{% url_query_append_tag request 'page' page_obj.previous_page_number %}">#}
+{#                            <i class="fa-solid fa-arrow-left"></i>#}
+{#                        </a>#}
+{##}
+{#                    <!-- If there are only next photos -->#}
+{#                    {% elif page_obj.has_next %}#}
+{#                        <a href="?{% url_query_append_tag request 'page' page_obj.next_page_number %}">#}
+{#                            <i class="fa-solid fa-arrow-right"></i>#}
+{#                        </a>#}
+{#                    {% endif %}#}
 
                 </span>
             </div>
